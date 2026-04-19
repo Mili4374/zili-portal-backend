@@ -9,7 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/notes")
-@CrossOrigin(origins = "http://localhost:5173") 
+// Updated to allow your live Vercel site to fetch and post notes
+@CrossOrigin(origins = {
+    "https://zili-portal-frontend.vercel.app", 
+    "https://zili-portal-frontend-milis-projects.vercel.app"
+}, allowCredentials = "true") 
 public class NoteController {
 
     @Autowired

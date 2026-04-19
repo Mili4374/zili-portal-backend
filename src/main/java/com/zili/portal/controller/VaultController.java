@@ -9,7 +9,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/vault")
-@CrossOrigin(origins = "http://localhost:5173")
+// Opening the vault for your live Vercel frontend!
+@CrossOrigin(origins = {
+    "https://zili-portal-frontend.vercel.app", 
+    "https://zili-portal-frontend-milis-projects.vercel.app"
+}, allowCredentials = "true")
 public class VaultController {
 
     @Autowired
